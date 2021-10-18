@@ -43,22 +43,6 @@ jobs:
     - name: Setup Android SDK
       uses: android-actions/setup-android@v2
 
-    - name: Assume RoleCiSlave
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-region: us-west-2
-        role-to-assume: arn:aws:iam::429750608758:role/RoleCiSlave
-        role-skip-session-tagging: true
-        role-duration-seconds: 3600    
-
-    #- name: Assume earnings-service-role
-    #  uses: aws-actions/configure-aws-credentials@v1
-    #  with:
-    #    aws-region: us-west-2
-    #    role-to-assume: arn:aws:iam::429750608758:role/<fill in your service role>
-    #    role-skip-session-tagging: true
-    #    role-duration-seconds: 3600
-
     # try auto build action
     - name: Autobuild
       uses: github/codeql-action/autobuild@v1
