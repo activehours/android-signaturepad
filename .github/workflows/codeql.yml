@@ -11,7 +11,7 @@ on:
 jobs:
   analyze:
     name: Analyze
-    runs-on: [ self-hosted, OnDemand, Linux ]
+    runs-on: [ ubuntu-latest ]
 
     strategy:
       fail-fast: false
